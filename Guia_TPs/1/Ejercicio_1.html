@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Curso Ingreso UTN FRA</title>
+
+		<!--Estilos-->
+		<link rel="stylesheet" type="text/css" href="../estilo.css">
+		<link rel="stylesheet" type="text/css" href="../animacion.css">
+		<!--final de Estilos-->
+
+		<!--Lógica-Programación-->
+		<script SRC="bower_components/angular/angular.min.js" TYPE="text/javascript"></script>
+
+
+
+
+		<script type="text/javascript" src="Ejercicio_1.js"></script>
+        <!--Final de Lógica-Programación -->
+		
+
+		</head>
+	<body ng-app="Pto1" ng-controller="Atributos">
+		<div class="CajaUno animated bounceInDown">
+			
+
+		<span> {{titulo}} </span>
+
+		
+			<form id="FormIngreso">
+				<input type="text"  placeholder="Ingrese número" id="numeroUno" ng-model="NumUno">
+				<br>
+
+				<input type="text"  placeholder="Ingrese número" id="numeroDos" ng-model="NumDos">
+				<br>
+
+				<input type="text"  placeholder="Ingrese número" id="numeroTres" ng-model="NumTres" >
+				<br>
+			</form>
+			
+		</div>
+		<div class="CajaUno animated bounceInLeft">
+			
+			<button  class="MiBotonUTN" ng-click="Suma()" >Suma Resultado</button>
+			<button  class="MiBotonUTN" ng-click="Prom()" >Promedio Resultado</button>
+			<button  class="MiBotonUTN" ng-click="Iva()" >IVA Resultado</button>
+
+			<input type="text"  placeholder="Ingrese número" id="Resultado" ng-model="RDO" disabled="1">
+
+		</div>
+
+		<div class="CajaEnunciado animated bounceInLeft">
+			<h2>Enunciado:</h2>
+			
+	
+				<h3>
+
+					A. Ingresar tres precios de productos y mostrar la suma de los mismos. <br><br>
+					B. Ingresar tres precios de productos y mostrar el promedio de los mismos. <br><br>
+					C. ingresar tres precios de productos y mostrar precio final (más IVA 21%). <br><br>
+
+				</h3>
+			
+		</div>
+
+		<div class="CajaAbajo animated bounceInUp">
+	
+		</div>
+	</body>
+</html>

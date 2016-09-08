@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Curso Ingreso UTN FRA</title>
+
+		<!--Estilos-->
+		<link rel="stylesheet" type="text/css" href="../estilo.css">
+		<link rel="stylesheet" type="text/css" href="../animacion.css">
+		<!--final de Estilos-->
+
+		<!--Lógica-Programación-->
+		<script SRC="bower_components/angular/angular.min.js" TYPE="text/javascript"></script>
+
+
+
+
+		<script type="text/javascript" src="Ejercicio_3.js"></script>
+        <!--Final de Lógica-Programación -->
+		
+
+		</head>
+	<body ng-app="Pto3" ng-controller="Atributos">
+		<div class="CajaUno animated bounceInDown">
+			
+
+		<span> {{titulo}} </span>
+
+		
+			<form id="FormIngreso">
+
+				<span> {{PrimeraFuncion}} </span>
+				<input type="text"  placeholder="Ingrese Cº" id="NumCencius" ng-model="NumC" ng-change="C_Fahrenheit()">
+				<input type="text"  placeholder="Valor Fº" id="RDO_Fahrenheit" ng-model="RDOf" value="" disabled="1">
+
+				<br>
+				<br>
+				<br>
+
+				<span> {{PrimeraFuncion}} </span>
+				<input type="text"  placeholder="Ingrese Fº" id="NumFahrenheit" ng-model="NumF" ng-Change="F_Celcius()">
+				<input type="text"  placeholder="Valor Cº" id="RDO_celcius" ng-model="RDOc">
+				<br>
+
+			</form>
+
+
+			
+
+
+		</div>
+
+		<div class="CajaEnunciado animated bounceInLeft">
+			<h2>Enunciado:</h2>
+			
+	
+				<h3>
+
+3. Para el departamento de Pinturas:
+<br><br>
+A. Al ingresar una temperatura en Fahrenheit debemos mostrar la temperatura en Centígrados con un mensaje concatenado (ej.:" 32 Fahrenheit son 0 centígrados").
+<br><br>
+B. Al ingresar una temperatura en Centígrados debemos mostrar la temperatura en Fahrenheit (ej.: " 0 centígrados son 32 Fahrenheit ").
+
+				</h3>
+			
+		</div>
+
+		<div class="CajaAbajo animated bounceInUp">
+	
+		</div>
+	</body>
+</html>

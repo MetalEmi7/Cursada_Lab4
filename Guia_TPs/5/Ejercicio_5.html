@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Curso Ingreso UTN FRA</title>
+
+		<!--Estilos-->
+		<link rel="stylesheet" type="text/css" href="../estilo.css">
+		<link rel="stylesheet" type="text/css" href="../animacion.css">
+		<!--final de Estilos-->
+
+		<!--Lógica-Programación-->
+		<script SRC="bower_components/angular/angular.min.js" TYPE="text/javascript"></script>
+
+
+
+
+		<script type="text/javascript" src="Ejercicio_5.js"></script>
+        <!--Final de Lógica-Programación -->
+		
+
+		</head>
+	<body ng-app="Pto5" ng-controller="ControllerTP">
+		<div class="CajaUno animated bounceInDown">
+			
+
+		<span> {{titulo}} </span>
+
+		Keep HTML: <input type="checkbox" ng-model="myVar" ng-init="myVar = true">
+
+<div ng-if="myVar">
+<h1>Welcome</h1>
+<p>Welcome to my home.</p>
+<hr>
+</div>
+
+		
+			<form id="FormIngreso">
+
+				<input type="hidden" id="Num_S" ng-model="NumSecreto">
+				<input type="text"  placeholder="Ingrese Cº" id="Num1" ng-model="NumUno" >
+
+				<input type="button" id="BtnVerificar" ng-click="Verificar()" value="Verificar">
+
+				<input type="text"  placeholder="Intentos" id="Contador" ng-model="Cont" disabled="1">
+
+			</form>
+
+
+			
+
+
+		</div>
+
+		<div class="CajaEnunciado animated bounceInLeft">
+			<h2>Enunciado:</h2>	
+				<h3>
+
+
+
+
+
+
+
+
+				</h3>							
+		</div>
+
+		<div class="CajaAbajo animated bounceInUp">
+	
+		</div>
+	</body>
+</html>
