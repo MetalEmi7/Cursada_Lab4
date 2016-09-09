@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html class="ng-scope" ng-app="app"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide{display:none !important;}ng\:form{display:block;}.ng-animate-block-transitions{transition:0s all!important;-webkit-transition:0s all!important;}.ng-hide-add-active,.ng-hide-remove{display:block!important;}</style>
+    <script src="a_data/angular.js"></script>
+    <script src="a_data/angular-locale_es-es.js"></script>
+    <script src="a_data/script.js"></script>
+  </head>
+  <body class="ng-scope ng-binding" ng-controller="PruebaController">
+
+    <form class="ng-pristine ng-invalid ng-invalid-required" name="miFormulario" novalidate="">
+      Nombre:<input required="required" class="ng-pristine ng-invalid ng-invalid-required ng-valid-maxlength ng-valid-minlength ng-valid-pattern" ng-model="model.nombre" name="nombre" ng-maxlength="50" ng-minlength="3" ng-required="requeridoNombre" ng-pattern="patternNombre" type="text">
+      <br>
+      Correo eletronico:<input class="ng-pristine ng-valid ng-valid-email" ng-model="model.correo" name="correo" type="email">
+      <br>
+      Edad:<input class="ng-pristine ng-valid ng-valid-number ng-valid-max ng-valid-min" ng-model="model.edad" name="edad" min="18" max="99" type="number">
+      <br>
+      Sitio web:<input class="ng-pristine ng-valid ng-valid-url" ng-model="model.sitioweb" name="sitioweb" type="url">
+    </form>
+    <br>
+    miFormulario.nombre.$error.pattern:  false      
+    <br>
+    miFormulario.nombre.$error.required:  true      
+    <br>
+    miFormulario.nombre.$error.minlength:  false     
+    <br>
+    miFormulario.nombre.$error.maxlength:  false
+    <br>
+    miFormulario.correo.$error.email:  false 
+    <br>
+    miFormulario.edad.$error.number:  false
+    <br>
+    miFormulario.edad.$error.min:  false
+    <br>
+    miFormulario.edad.$error.max:  false    
+    <br>
+    miFormulario.sitioweb.$error.url:  false     
+    
+  
+  
+</body></html>
