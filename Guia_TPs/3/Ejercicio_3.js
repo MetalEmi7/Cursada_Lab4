@@ -9,7 +9,7 @@ $scope.titulo="Ejercicio Nº 3";
 	//$scope.NumUno = "1";
 
 	$scope.PrimeraFuncion = "De Celcius a Fahrenheit";
-	$scope.PrimeraFuncion = "De Fahrenheit a Celcius";
+	$scope.SegundaFuncion = "De Fahrenheit a Celcius";
 
 
 

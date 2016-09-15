@@ -11,18 +11,18 @@ $scope.titulo="Ejercicio Nº 5";
 	$scope.NumSecreto = Math.floor((Math.random() * 10) + 1);
 	$scope.Cont;
 
-$scope.Verificar = function()
-{
-$scope.Cont++;
-console.log($scope.NumSecreto);
-console.log($scope.NumUno);
 
-	if(parseInt($scope.NumUno) == $scope.NumSecreto)
+
+	$scope.Verificar = function()
 	{
-		alert("Sos un ganador");
+	$scope.Cont++;
+	console.log($scope.NumSecreto);
+	console.log($scope.NumUno);
+	
+		if(parseInt($scope.NumUno) == $scope.NumSecreto)
+		{
+			alert("Sos un ganador");
+		}
 	}
-}
-
-
-
+	
 });
