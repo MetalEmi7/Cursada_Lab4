@@ -1,4 +1,4 @@
-var miAplicacion = angular.module('app',['ui.router']);
+var miAplicacion = angular.module('app',['ui.router'])
 // se incluyo angular ui-rout
 
 miAplicacion.config(function($stateProvider, $urlRouterProvider){
@@ -7,39 +7,38 @@ miAplicacion.config(function($stateProvider, $urlRouterProvider){
 		.state('inicio',{
 			url: "/inicio",
 			templateUrl: "inicio.html",
-			controller:"controlInicio"
+			controller:'controlInicio'
+		})
+		
+		.state('persona',{
+			url: "/persona",
+			abstract: true,
+			templateUrl: "abstract_persona.html",
+			controller:'controlpersona'
+		})
+		.state('persona.menu',{
+			url: "/menu",
+			views: {
+				'contenido':{
+					url: "persona_menu.html",
+					controller: "control_persona_menu"
+				}
+			}
 		})
 
-	$urlRouterProvider.otherwise('/inicio');
+	$urlRouterProvider.otherwise('/persona');
+	/*
+	Esto establece cual sera el "templateUrl" asociado a este "url" que se iniciara
+	al entrar al index.html
+	*/
+
 
 });
 
-miAplicacion.controller('ControlInicio',function($scope){
-		// minuto 1,20 horas
-});
+miAplicacion.controller('controlInicio',function($scope){
 
 
 
-/*
-
-
-
-miAplicacion.config(function(){
-	//Parametros
-
-	$stateProvider,
-	$urlRouterProvider
-	//Manejara la navegacion del sitio, y gestionara la logica de los distintos 
-	//controladoras que se interactuan entre si de diferentes maneras
-
-
-
-	$stateProvider
-		.state('inicio',{
-			url:"/inicio",
-			templateUrl:"inicio.html",
-			controller:"controlInicio"
-		})
 
 
 
@@ -49,10 +48,28 @@ miAplicacion.config(function(){
 
 });
 
+miAplicacion.controller('controlpersona',function($scope){
 
 
 
 
 
 
-*/
+
+
+
+
+});
+
+miAplicacion.controller('control_persona_menu',function($scope){
+
+
+
+
+
+
+
+
+
+
+});

@@ -8,9 +8,11 @@
       <!--script type="text/javascript" src="./bower_components/jquery/dist/jquery.js"></script-->
 
 
-       	<meta charset="UTF-8">
+    <meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="icon" href="http://www.octavio.com.ar/favicon.ico">
+
+
 	<!-- Comandos Bower para GitBash
 	$ bower init: Crea un archivo ".bower.Json"
 	$ bower install angular --save: agrego angular con dependencia.
@@ -18,29 +20,41 @@
 	$ bower install boostrap --save: 
 	$ bower install angular-ui-router --save: Servira para la utilizacion de ui-view en las TAGs que necesitemos.
 	$ bower install http://github.com/OctavioVillegas/estilos.git --save: Los estilos
-	 -->  
-    <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
 
-    <!-- En el siguiente orden... -->
+	NOTA: Todas las referencias van en este archivo "index.html"
+
+
+    <!-- ESTILOS -->
+    <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/estilo.css">
+    <link rel="stylesheet" type="text/css" href="css/animacion.css">
+    <link rel="stylesheet" type="text/css" href="css/landing-page.css">
+
+    <link rel="stylesheet" type="text/css" href="bower_components\estilos/animacion.css">
+    <link rel="stylesheet" type="text/css" href="bower_components\estilos/estilo.css">
+    
+
+    <!-- SCRIPTS en el siguiente orden... -->
     <script SRC="bower_components/angular/angular.min.js" TYPE="text/javascript"></script>
-    <script SRC="bower_components/angular-ui-router/release/angular-ui-router.js"s TYPE="text/javascript"></script>
+    <script SRC="bower_components/angular-ui-router/release/angular-ui-router.js" TYPE="text/javascript"></script>
+
+    <!-- jQuery-->
+    <script src="bower_components\jquery/dist/jquery.js"></script> <!-- -->
+
+    <!-- Boostrap--> 
+    <script src="bower_components\bootstrap/dist/js/bootstrap.min.js"></script> <!-- -->
+
+
 
  	<script SRC="js/Aplicacion.js" TYPE="text/javascript"></script>
 	
 </head>
 
-
-
-
 <body ng-app="app" >
-        <!--?php        
-        require_once"partes/barraDeMenu.php";
-     ?-->
+    <ui-view>
+    </ui-view>
 
-     <ui-view>
 
-     </ui-view>
 </body>
-
 
 </html>
