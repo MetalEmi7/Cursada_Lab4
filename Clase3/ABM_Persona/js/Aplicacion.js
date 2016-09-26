@@ -4,29 +4,33 @@ var miAplicacion = angular.module('app',['ui.router'])
 miAplicacion.config(function($stateProvider, $urlRouterProvider){
 
 	$stateProvider
-		.state('inicio',{
+		.state("inicio",{
 			url: "/inicio",
 			templateUrl: "inicio.html",
-			controller:'controlInicio'
+			controller:'control_inicio'
 		})
 		
-		.state('persona',{
+		.state("persona",{
 			url: "/persona",
 			abstract: true,
 			templateUrl: "abstract_persona.html",
-			controller:'controlpersona'
+			controller:'abstract_persona'
 		})
-		.state('persona.menu',{
+		.state("persona.menu",
+		{
 			url: "/menu",
-			views: {
-				'contenido':{
-					url: "persona_menu.html",
+			views:
+			{
+				'contenido':
+				{
+					templateUrl: "persona_menu.html",
 					controller: "control_persona_menu"
 				}
 			}
 		})
 
-	$urlRouterProvider.otherwise('/persona');
+	//$urlRouterProvider.otherwise('/persona');
+	$urlRouterProvider.otherwise('/inicio');
 	/*
 	Esto establece cual sera el "templateUrl" asociado a este "url" que se iniciara
 	al entrar al index.html
@@ -35,7 +39,7 @@ miAplicacion.config(function($stateProvider, $urlRouterProvider){
 
 });
 
-miAplicacion.controller('controlInicio',function($scope){
+miAplicacion.controller('control_inicio',function($scope){
 
 
 
@@ -48,7 +52,7 @@ miAplicacion.controller('controlInicio',function($scope){
 
 });
 
-miAplicacion.controller('controlpersona',function($scope){
+miAplicacion.controller('abstract_persona',function($scope){
 
 
 
@@ -61,9 +65,7 @@ miAplicacion.controller('controlpersona',function($scope){
 
 });
 
-miAplicacion.controller('control_persona_menu',function($scope){
-
-
+miAplicacion.controller('control_persona_menu',function($scope, $state){
 
 
 
