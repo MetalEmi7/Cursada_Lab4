@@ -17,12 +17,17 @@
 
 	 <script SRC="js/controlGrilla.js" TYPE="text/javascript"></script>
 </head>
+
+
+
+
+
 <body>
 	<!--?php		
 		require_once"partes/barraDeMenu.php";
 	 ?-->
 
- 
+ 	
               <ul class="nav nav-tabs">
 		         <li  class="btn btn-info animated bounceInLeft" >
 		         	<a href="index.html">
@@ -43,7 +48,7 @@
 		         		</li>
 		        	<span id="tituloBarra"  class="animated bounceInRight">ABM - PHP - Angular Versión 1.0.1 &nbsp;&nbsp;&nbsp;</span>
       </ul>
-		
+	
 
 	<div class="container">
 		<div class="page-header">

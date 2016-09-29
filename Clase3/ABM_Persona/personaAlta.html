@@ -1,0 +1,52 @@
+<div class="container">
+		<div class="page-header">
+			<center> <h1>Datos {{DatoTest}} {{mascota}}</h1>   </center>     
+		</div>
+		<div class="CajaInicio animated bounceInRight">
+			<h1> <!--?php echo $titulo; ?-->titulo </h1>
+
+			<form name="FormIngreso"  enctype="multipart/form-data" novalidate>
+
+				<input type="text" name="apellido" ng-model="persona.apellido" placeholder="ingrese apellido" value="" required/>
+				
+				
+				<input type="text" name="nombre" ng-model="persona.nombre" placeholder="ingrese nombre" value="" required/> 
+				<span id="lblNombre" style="display:none;color:#FF0000;width:1%;float:right;font-size:80">*</span>
+
+
+
+				<input type="email" name="email" ng-model="persona.email" placeholder="ingrese email" value="" required/> 
+				<span id="lblEmail" style="display:none;color:#FF0000;width:1%;float:right;font-size:80">*</span>
+
+
+				<span>SEXO</span><br>
+				<!--? 	
+				Al poner el atributo "REQUIRED" solo en un INPUT de tipo RADIO que comparta el mismo name con otros RADIOs, el atributo actua para todos estos RADIOs del mismo name.	
+				?-->
+				<input type="radio" name="sexo" value="Male" ng-model="persona.sexo" required><label>Masculino</label><br>
+ 				<input type="radio" name="sexo" value="Famale" ng-model="persona.sexo" ><label>Femenino</label><br>
+
+				<input type="date" name="fecha" ng-model="persona.fecha" placeholder="ingrese fecha" required/> 
+
+				<input type="password" name="password" ng-model="persona.password" placeholder="ingrese password" value="" required/>
+				<input type="password" name="rePassword" ng-model="persona.rePassword" placeholder="Reingrese password" value="" required/>
+				<span id="lblrePass" style="display:none;color:#FF0000;width:1%;float:right;font-size:80">*</span>			
+
+				<input type="hidden" name="idOculto" id="id" value="" />
+				<!--
+				<input type="file" name="foto" />
+				
+
+				<img  src="fotos/pordefecto.png" class="fotoform" id="foto"/>
+				<p style="  color: black;">*La foto se actualiza al guardar.</p>
+				-->
+
+				<a class="btn btn-info " name="guardar" ng-click="Guardar()" ng-disabled="FormIngreso.$invalid"><span class="glyphicon glyphicon-save">&nbsp;</span>Guardar</a> ES INVALIDO?: {{FormIngreso.$invalid}} 
+					
+				<input type="hidden" value="" id="idParaModificar" name="agregar" />
+				<input type="hidden" value="" id="hdnAgregar" name="agregar" />
+				</div>
+
+			</form>
+	</div>
+	</div>

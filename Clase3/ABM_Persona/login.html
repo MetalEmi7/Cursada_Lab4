@@ -1,0 +1,19 @@
+<div class="container">
+		<div class="page-header">
+			<center> <h1>Datos {{DatoTest}} </h1>   </center>     
+		</div>
+
+	<div class="CajaInicio animated bounceInRight">
+		<h1> <!--?php echo $titulo; ?-->titulo </h1>
+			<form name="FormIngreso"  enctype="multipart/form-data" novalidate>
+				
+				<input type="text" name="nombre" ng-model="persona.nombre" placeholder="ingrese nombre" value="" required/> 
+
+				<input type="text" name="email" ng-model="persona.email" placeholder="ingrese email" value="" required/>
+
+				<span id="lblNombre" style="display:none;color:#FF0000;width:1%;float:right;font-size:80">*</span>
+
+				<a class="btn btn-info " name="guardar" ng-click="Guardar()" ng-disabled="FormIngreso.$invalid"><span class="glyphicon glyphicon-save">&nbsp;</span>Guardar</a> ES INVALIDO?: {{FormIngreso.$invalid}} 
+			</form>
+	</div>
+<div>

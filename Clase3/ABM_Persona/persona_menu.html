@@ -8,9 +8,15 @@
 					
 		<form id="FormIngreso">
 
-			<input type="button" value="ALTA PERSONA" ng-click="ir_alta()" class="list-group-item  list-group-item list-group-item-info"><h4 class="list-group-item-heading">Alta de persona</h4></input>										
+			<!-- Hace referencia a las funciones $scope -->
+			<input type="button" value="ALTA PERSONA" ng-click="ir_alta()" class="list-group-item  list-group-item list-group-item-info"><h4 class="list-group-item-heading">Alta de persona</h4></input>
 										
-			<a href="formGrilla.html" class="list-group-item  list-group-item list-group-item-info"><h4 class="list-group-item-heading">Grilla de personas</h4></a>
+			<input type="button" value="GRILLA DE PERSONAS" ng-click="ir_grilla()" class="list-group-item  list-group-item list-group-item-info"><h4 class="list-group-item-heading">Grilla de personas</h4></a>
+
+			<!-- Hace referencia a los States -->
+			<a ui-sref="persona.alta()" class="list-group-item  list-group-item list-group-item-info"><h4 class="list-group-item-heading">Alta de persona</h4></a>
+										
+			<a ui-sref="persona.grilla()" class="list-group-item  list-group-item list-group-item-info"><h4 class="list-group-item-heading">Grilla de personas</h4></a>
 
 		</form>
 	</div>
